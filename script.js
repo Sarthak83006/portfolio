@@ -14,3 +14,7 @@ form.addEventListener('submit', function (e) {
   alert('Thank you! Your message has been submitted.');
   form.reset();
 });
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('Service Worker Registered'));
+}
